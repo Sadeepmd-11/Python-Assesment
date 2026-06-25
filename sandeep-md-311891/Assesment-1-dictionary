@@ -1,0 +1,2 @@
+n1={"name":"xyz", "age":12, "place":"bengaluru"}
+print(n1)
