@@ -77,3 +77,26 @@ ll.display()
 #----------------------------------------
 #Question23
 
+class stack:
+    def __init__(self):
+        self.stack=[]
+    
+    def push(self, item):
+        self.stack.append(item)
+
+    def pop(self):
+        if len(self.stack)==0:
+            return "stack is empty"
+        return self.stack.pop()
+
+    def peek(self):
+        if len(self.stack)==0:
+            return "stack is empty"
+        return self.stack[-1]
+
+s=stack()
+s.push("google.com")
+s.push("pynative.com")
+print("current top:", s.peek())
+print("popped:", s.pop())
+print("new top:", s.peek())
