@@ -27,3 +27,20 @@ n=8
 print(f"First {n} fibanocci numbers are:")
 for x in fibonacci(n):
     print(x, end=" ")
+
+#------------------------------------------------
+#question30
+class Database:
+    def __enter__(self):
+        print("connecting to databse")
+        return self
+
+    def __exit__(self,exact_type,exact_value,traceback):
+        if exact_value:
+            print(f"error: {exact_value}")
+        print("closing databse connection")
+        return True
+
+with Database():
+    print("processing data")
+    raise Exception("something went wrong")
